@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.7/schema.json",
+  "version": "v1.7",
+  "name": "Bid Agent",
+  "description": "A bid-team assistant that drafts responses to RFPs, RFIs, and security questionnaires.",
+  "instructions": "$[file('instruction.txt')]",
+  "capabilities": [
+    { "name": "WebSearch" },
+    { "name": "OneDriveAndSharePoint" },
+    { "name": "CodeInterpreter" }
+  ],
+  "conversation_starters": [
+    { "title": "Draft RFP Responses", "text": "Draft responses to this RFP using our prior answer library and flag gaps." },
+    { "title": "Security Questionnaire", "text": "Complete this security questionnaire and highlight what we cannot answer." },
+    { "title": "Executive Summary", "text": "Generate an executive summary aligned to the client's stated priorities." }
+  ]
+}
