@@ -1,17 +1,47 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.7/schema.json",
   "version": "v1.7",
-  "name": "Bid Agent",
-  "description": "A bid-team assistant that drafts responses to RFPs, RFIs, and security questionnaires.",
+  "name": "NTZ Bid Copilot",
+  "description": "Enterprise proposal intelligence for Microsoft 365 Copilot. Drafts RFP responses, security questionnaires, capability statements, and bid documents using SharePoint grounding.",
   "instructions": "$[file('instruction.txt')]",
   "capabilities": [
-    { "name": "WebSearch" },
-    { "name": "OneDriveAndSharePoint" },
-    { "name": "CodeInterpreter" }
+    {
+      "name": "WebSearch"
+    },
+    {
+      "name": "OneDriveAndSharePoint"
+    },
+    {
+      "name": "CodeInterpreter"
+    },
+    {
+      "name": "GraphicArt"
+    }
   ],
   "conversation_starters": [
-    { "title": "Draft RFP Responses", "text": "Draft responses to this RFP using our prior answer library and flag gaps." },
-    { "title": "Security Questionnaire", "text": "Complete this security questionnaire and highlight what we cannot answer." },
-    { "title": "Executive Summary", "text": "Generate an executive summary aligned to the client's stated priorities." }
+    {
+      "title": "Draft RFP Responses",
+      "text": "Draft responses to this RFP using our previous answer library, capability statements, and proposal templates. Highlight any unanswered requirements."
+    },
+    {
+      "title": "Complete Security Questionnaire",
+      "text": "Complete this security questionnaire using our security documents and flag questions requiring SME review."
+    },
+    {
+      "title": "Generate Executive Summary",
+      "text": "Generate an executive summary aligned to the customer's priorities using our proposal playbook."
+    },
+    {
+      "title": "Review Proposal",
+      "text": "Review this proposal against our bid playbook and identify risks, gaps, and improvement opportunities."
+    },
+    {
+      "title": "Generate Proposal Document",
+      "text": "Generate a professionally formatted .docx version of the proposal, RFP response, or security questionnaire discussed in this conversation."
+    },
+    {
+      "title": "Generate Proposal Cover",
+      "text": "Generate a professional proposal cover page or bid presentation graphic using GraphicArt."
+    }
   ]
 }

@@ -1,0 +1,38 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.27/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.27",
+    "version": "1.0.0",
+    "id": "426c2198-66c4-4ac9-bc1f-e5c4f57f007f",
+    "developer": {
+        "name": "Netsmartz",
+        "websiteUrl": "https://www.netsmartz.com",
+        "privacyUrl": "https://www.netsmartz.com/privacy-policy/",
+        "termsOfUseUrl": "https://www.netsmartz.com/terms/agent-marketplace/"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "NTZ Bid Copilot",
+        "full": "NTZ Bid Copilot"
+    },
+    "description": {
+        "short": "Drafts RFP responses, RFIs, and security questionnaires.",
+        "full": "NTZ Bid Copilot helps proposal and bid teams prepare high-quality RFP responses, RFIs, security questionnaires, capability statements, and proposal documents. Grounded in your organization's SharePoint proposal library, previous responses, and knowledge base, it matches answers, identifies content gaps, researches customer context, generates executive summaries, and produces professionally formatted proposal documents. It works entirely within your Microsoft 365 tenant and only accesses content the signed-in user can access. Requires a Microsoft 365 Copilot license per user. Built by Netsmartz."
+    },
+    "accentColor": "#005A9E",
+    "copilotAgents": {
+        "declarativeAgents": [
+            {
+                "id": "ntzBidCopilot",
+                "file": "declarativeAgent.json"
+            }
+        ]
+    },
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}
